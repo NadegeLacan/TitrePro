@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_choix_compte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#087CA7"
+        android:gravity="center"
+        android:text="Type de compte"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rg_choix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_club"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Club" />
+
+        <RadioButton
+            android:id="@+id/rb_pilote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilote" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_valider_choix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#087CA7"
+        android:text="Valider" />
+</LinearLayout>

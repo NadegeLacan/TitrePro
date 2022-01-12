@@ -1,0 +1,718 @@
+body{
+    background-color: #FFFFFF;
+    color:#43b2e0;
+    font-family: Tahoma;
+    display:grid;
+    grid-template-columns: 1fr 2fr 0.7fr;
+    grid-template-rows: 2fr 8fr 0.1fr;
+    padding:0;
+    margin:0;
+}
+
+h1{
+    text-align: center;
+    grid-column: 2;
+    grid-row:1;
+    color: #43b2e0;
+    z-index : 10;
+}
+
+h2, h3{
+    text-align:center;
+    color: #43b2e0;
+    font-size: 30px;
+}
+
+h4{
+    color: #43b2e0;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #FFFFFF;
+    border-width: 1em;
+    height: 1em;
+}
+
+h5{
+    color:#43b2e0;
+}
+
+/* MISE EN PAGE DU HEADER ET DU MENU*/
+header{
+    grid-column : 1 / 4;
+    grid-row:1;
+    display: grid;
+    grid-template-columns: 1fr 4.5fr 0.5fr;
+    color:#43b2e0;
+    background-color: white;
+    z-index : 10;
+    padding:0;
+    margin-top:0;
+    justify-content: space-between;
+    max-width: 100vw;
+    margin-bottom: 1%;
+}
+header>img{
+    padding:1%;
+    grid-column: 1;
+    align-self: center;
+}
+
+.dropdown_content_menu_club,.dropdown_content_menu_pilotes {
+    display: none;
+    position: absolute;
+    background-color: #43b2e0;
+    min-width: 160px;
+    color: #FFFFFF;
+    z-index: 8;
+    padding: 7px;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+.dropdown_content_menu_club>p>a:hover, .dropdown_content_menu_pilotes>p>a:hover{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown_menu>a:link, .dropdown_menu>a:visited,
+.dropdown_content_menu_club>p>a:link, .dropdown_content_menu_pilotes>p>a:link,
+.dropdown_content_menu_club>p>a:visited, .dropdown_content_menu_pilotes>p>a:visited{
+    text-decoration: none;
+    font-weight: normal;
+    color:#FFFFFF;
+}
+
+.dropdown_menu{
+    background: linear-gradient(#FFFFFF,#43b2e0);
+    color:white;
+    grid-column: 2;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index : 10;
+    pading-top:10%;
+    cursor: pointer;
+}
+
+.dropdown_menu_club, .dropdown_menu_pilotes{
+    position: relative;
+}
+
+.dropdown_menu_pilotes:hover .dropdown_content_menu_pilotes {
+    display: block;
+}
+
+.dropdown_menu_club:hover .dropdown_content_menu_club {
+    display: block;
+}
+
+.userConnect>p {
+    color: #0606C6;
+    font-weight: normal;
+}
+
+.userConnect{
+    grid-column: 1;
+    align-self: flex-end;
+}
+
+.user_account>a>i {
+    color: #43b2e0;
+    grid-column: 3;
+}
+
+.user_account{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+header>nav>div>a>h4{
+    text-decoration:none;
+}
+
+.cardClub{
+    display: flex;
+    flex-direction: row;
+    border : solid 0.2em #43b2e0;
+    box-shadow: 3px 3px 3px #43b2e0;
+}
+
+.cardClub>a:link, .cardClub>a:visited{
+    color:#43b2e0;
+    text-decoration: none;
+}
+
+.cardClub:hover{
+    background-color: #43b2e0;
+}
+
+.cardClub:hover .listTraining{
+    color:#FFFFFF;
+    font-weight: bold;
+}
+
+.cardClub:hover a{
+    color:#FFFFFF;
+    font-weight: bold;
+}
+
+.logoClub{
+    max-width: 150px;
+}
+
+.infoClub{
+    display: flex;
+    flex-direction: column;
+    margin-left:7%;
+}
+
+.listTraining{
+    font-weight: normal;
+    color: #0606C6;
+    margin:3%;
+    white-space: nowrap;
+}
+
+.dateTraining{
+    font-weight: bold;
+    color: #0606C6;
+    margin-top:10%;
+}
+
+/* MISE EN FORME CARROUSEL*/
+.carrousel{
+    grid-column : 2 / 4;
+    grid-row:2;
+}
+
+.Index_slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.Index_mySlides {
+    display: none;
+    position: relative;
+    margin: auto;
+}
+
+.slide_img {
+    position: absolute;
+    margin: auto;
+    z-index : 1;
+}
+
+#carrousel_img1, #carrousel_img2, #carrousel_img3, #carrousel_img4, #carrousel_img5 {
+    max-width: 100%;
+    height: auto;
+    z-index : 1;
+}
+
+/* MISE EN PAGE FRAME CONNECTION */
+.frameConnect, .frameConnect>p,
+.frameConnectAccount>p{
+    grid-column: 3;
+    grid-row: 2;
+    background: #FFFFFF;
+    color:#43b2e0;
+    padding: 0.5em;
+    z-index : 10;
+    height: max-content;
+    align-self: center;
+}
+
+.frameConnectAccount{
+    grid-column: 3;
+    grid-row: 2;
+    background: #FFFFFF;
+    color:#43b2e0;
+    padding: 0.5em;
+    z-index : 10;
+    height: max-content;
+    align-self: flex-start;
+}
+
+.frameConnect>form, .frameConnectAccount>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frameConnect>form>input, .frameConnect>form>legend,
+.frameConnectAccount>form>input, .frameConnectAccount>form>legend{
+    margin:1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* MISE EN PAGE FRAME GAUCHE */
+.frameLeft {
+    grid-column: 1;
+    grid-row: 2;
+    background: #FFFFFF;
+    color:#43b2e0;
+    padding: 0.5em;
+}
+
+p {
+    color:#FFFFFF;
+    font-weight: bold;
+}
+
+/* MISE EN PAGE DU FOOTER*/
+footer {
+    background: linear-gradient(#43b2e0,#FFFFFF);
+    color:#FFFFFF;
+    grid-column : 1 / 4;
+    grid-row : 3;
+    z-index : 10;
+    height:150%;
+}
+
+footer>ul {
+    display:flex;
+    flex-direction : row;
+    justify-content : space-around;
+}
+
+footer>ul>li{
+    list-style: none;
+}
+
+footer>ul>li>a:link, footer>ul>li>a:visited {
+    color:#FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*
+.Index_fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 10s;
+    animation-name: fade;
+    animation-duration: 10s;
+}*/
+
+
+
+/*#carrousel_img1, #carrousel_img2, #carrousel_img3, #carrousel_img4, #carrousel_img5 {
+    -webkit-animation-name: anim_img;
+    -webkit-animation-duration: 8000ms;
+    animation-duration: 8000ms;
+    animation-name: anim_img;
+}
+
+@-webkit-keyframes Index_fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes Index_fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes anim_img {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes anim_img {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
+
+/* MISE EN PAGE DROPDOWN MENU
+.dropDownMenuContentPilote, .dropDownMenuContentClub{
+    display:none;
+}
+
+.dropDownMenuPilote:hover .dropDownMenuContentPilote{
+    background-color: #FFFFFF;
+    color:#43b2e0;
+    text-decoration: none;
+    display:flex;
+    flex-direction: column;
+}
+
+.dropDownMenuClub:hover .dropDownMenuContentClub{
+    background-color: #FFFFFF;
+    color:#43b2e0;
+    text-decoration: none;
+    display:flex;
+    flex-direction: column;
+    .dropDownMenuContentPilote>a:link, .dropDownMenuContentPilote>a:visited, .dropDownMenuContentClub>a:link , .dropDownMenuContentClub>a:visited,
+.dropDownMenuContentPilote>h5>a:link, .dropDownMenuContentPilote>h5>a:visited, .dropDownMenuContentClub>h5>a:link , .dropDownMenuContentClub>h5>a:visited
+{
+    color:#43b2e0;
+    text-decoration: none;
+}
+}*/
+
+/* MISE EN PAGE FRAME DROIT
+.frameRight {
+    grid-column: 3;
+    grid-row: 2;
+    background: #FFFFFF;
+    color:#43b2e0;
+    padding: 0.5em;
+    z-index : 10;
+}
+
+.frameRight>form {
+    margin-top: 2em;
+}
+
+.frameRight>form>fieldset {
+    display:flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.frameRight>form>fieldset>a{
+    text-align: center;
+}
+
+.frameRight>form>fieldset>a:link{
+    color:#FFFFFF;
+}
+
+.frameRight>form>fieldset>a:visited{
+    color:#FFFFFF;
+}*/
+
+
+
+/* MISE EN PAGE FRAME CENTRE PAGE ACCUEIL
+.frameCenter {
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 5%;
+    border : solid 0.2em #43b2e0;
+    padding: 0.5em;
+}
+
+.frameCenter>h2{
+    text-shadow: 3px 3px 3px #43b2e0;
+}
+
+.frameCenter>p{
+    color:#43b2e0;
+}*/
+
+/* MISE EN PAGE DES FORMULAIRES */
+input, textarea{
+    border : solid 0.1em #43b2e0;
+}
+
+form>fieldset>legend{
+    color: #0606C6;
+    font-weight: bold;
+}
+
+fieldset{
+    border : solid 0.2em #43b2e0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.champForm, .champFiltre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding : 2%;
+}
+
+.champForm>label, .champFiltre>label{
+    grid-column: 1;
+    color: #0606C6;
+}
+
+.champForm>input{
+    grid-column: 2;
+}
+
+.champFiltre>label, .champFiltre>span{
+    font-weight: bold;
+    color: #0606C6;
+}
+
+.champFiltre>input{
+    grid-column: 2;
+    margin:3%;
+}
+
+.champFiltre{
+    padding-bottom: 15%;
+}
+
+.filtre{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.zoneRadio{
+    display: flex;
+    flex-direction: row;
+    color: #0606C6;
+}
+
+.border_table{
+    border : solid 0.1em #43b2e0;
+    color: #0606C6;
+    white-space: nowrap;
+    text-align: center;
+}
+
+fieldset>fieldset{
+    border : solid 0.1em #43b2e0;
+    padding: 1em;   
+}
+
+.frameCenter{
+    grid-column: 2/4;
+}
+
+.formTraining{
+    grid-column: 2/4;
+}
+/* MISE EN PAGE DES BOUTONS DES FORMULAIRES*/
+
+#resetTraining, #validationTraining, #selectTraining, #updateTraining, #validationConnexion,
+#resetValidRider, #validRider, #validFiltre, #resetForm, #validForm, #typeUserOK
+{
+    color:#F5EDEA;
+    background-color: #43b2e0;
+    padding: 0.5em;
+    width: 15em;
+    justify-self: center;
+    margin: 0.5em;
+    font-weight: bold;
+}
+
+/*
+.formRegisterAccount>form>fieldset {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 2.5fr 1.3fr 0.3fr;
+}
+
+.formRegisterAccount>form>fieldset>fieldset:nth-of-type(1){
+    grid-column : 1 / 3;
+    grid-row:1;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.formRegisterAccount>form>fieldset>fieldset:nth-of-type(2){
+    grid-column : 1;
+    grid-row: 2;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.formRegisterAccount>form>fieldset>fieldset:nth-of-type(3){
+    grid-column : 2;
+    grid-row: 2;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.formRegisterAccount>form>fieldset>fieldset:nth-of-type(4){
+    grid-column : 1 / 3;
+    grid-row: 3;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#resetRider, #resetChangeRider, #resetClub, #resetClubChange {
+    grid-column : 1 / 2;
+    grid-row:4;
+}
+
+#validationRider, #validationChangeRider, #validationClub, #validationClubChange {
+    grid-column : 2 / 3;
+    grid-row:4;
+}
+
+.formChangeAccount>form>fieldset>fieldset{
+    display: flex;
+    flex-direction: column;
+}*/
+
+/* MISE EN PAGE SELECTION REGION*/
+.regionSelection>li>a:link{
+    color:#43b2e0;
+}
+
+.regionSelection>li>a:visited{
+    color:#43b2e0;
+}
+
+/* responsive design*/
+
+@media screen and (max-width: 900px) {
+    body{
+        display:flex;
+        flex-direction: column;
+    }
+    header{
+        background: linear-gradient(#0606C6,#43b2e0);
+        color:#FFFFFF;
+        display:flex;
+        flex-direction: column;
+        top: 0;
+        left:0;
+        width: 100%;
+        padding-bottom: 2%;
+    }
+
+    .dropdown_menu_club, .dropdown_menu_pilotes, .dropdown_menu>a {
+        padding-right:2%;
+        padding-left: 2%;
+    }
+
+    .dropdown_menu{
+        flex-wrap: wrap;
+        background: none;
+    }
+
+    .user_account>a>i {
+        color: #FFFFFF;
+    }
+
+    .userConnect>p {
+        color: #FFFFFF;
+        font-weight: normal;
+        align-self: center;
+    }
+
+    h1{
+        grid-column: 1/4;
+        grid-row:1;
+        text-align: center;
+    }
+
+    header>img, .frameConnect{
+        display: none;
+    }
+
+    .carrousel {
+        display:none;
+    }
+
+    .listTraining{
+        white-space: normal;
+    }
+    footer>ul {
+        display:flex;
+        flex-direction : column;
+    }
+}
+
+    /*
+    #connexion{
+        color:#FFFFFF;
+        align-self: flex-end;
+        padding: 10px;
+    }
+    header>a>label{
+        display: flex;
+        color:#FFFFFF;
+        align-self: center;
+        font-size: 30px;
+        font-weight: bold;
+        width: 40px;
+        height: 30px;
+        border : solid #FFFFFF;
+        padding-bottom:10px;
+        padding-left: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+    .frameRight {
+        margin-top:150px;
+        order: 2; 
+    }
+
+
+    .formRegisterAccount, .formChangeAccount,.formChangeTraining,.formRegisterTraining,
+    .formSelectionTraining, .formValidClubTrainingRider, .formDeleteAccount,
+    .formDeleteTrainingRider, .pageConnexion{
+        margin-top:180px;
+    }
+    .regionSelection{
+        margin-top:200px;
+    }
+    .burger{
+        background: linear-gradient(#FFFFFF,#43b2e0);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+    }
+    .burger>a{
+        color:#FFFFFF;
+        text-decoration: none;
+        font-weight: bold;
+        padding:0.3em;
+    }
+    .burgerTitre{
+        text-shadow: 3px 3px 3px #FFFFFF;
+        color:#43b2e0;
+        font-weight: bold;
+        font-size: 1.3em;
+        padding:1em;
+    }
+    #burgerClose{
+        color:#43b2e0;
+        font-weight: bold;
+        text-align: left;
+        font-size: 1.5em;
+    }
+    .formRegisterAccount>form>fieldset{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .formRegisterAccount>form>fieldset>fieldset:nth-of-type(1),
+    .formRegisterAccount>form>fieldset>fieldset:nth-of-type(2),
+    .formRegisterAccount>form>fieldset>fieldset:nth-of-type(3),
+    .formRegisterAccount>form>fieldset>fieldset:nth-of-type(4){
+        display: flex;
+        flex-direction: column;
+    }

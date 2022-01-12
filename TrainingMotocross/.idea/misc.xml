@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_accueil_connecte.xml" value="0.2" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_choix_compte.xml" value="0.26132246376811596" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_club_modify_count.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_club_modify_training.xml" value="0.22" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_club_new_count.xml" value="0.2" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_club_new_training.xml" value="0.33" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_club_valid_pilot.xml" value="0.33" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/activity_pilot_new_count.xml" value="0.25" />
+        <entry key="..\:/Users/nadeg/AndroidStudioProjects/TrainingMotocross/app/src/main/res/layout/row_training.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
